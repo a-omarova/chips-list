@@ -40,7 +40,6 @@ export const ChipsList = (props: ChipListType) => {
         window.addEventListener('resize', handleRecalculateChips);
         handleRecalculateChips();
         return () => window.removeEventListener('resize', handleRecalculateChips);
-
     }, [list])
 
     const onChipClick = useCallback((id: string) => {
@@ -55,10 +54,12 @@ export const ChipsList = (props: ChipListType) => {
         }
     }, [chosenList, multipleChoice])
 
+    console.log(chipPopupNextLineFirstElem)
+
     return (
         <section className={styles.root} ref={sectionRef}>
             <div className={styles.chipsList} ref={chipsListRef}>
-                {list.map(chip => (
+                {list.slice(0, chipPopupNextLineFirstElem === -1 ? list.length : chipPopupNextLineFirstElem).map(chip => (
                     <Chip
                         key={chip.id}
                         id={chip.id}
@@ -82,7 +83,7 @@ export const ChipsList = (props: ChipListType) => {
                     </button>
                     {openPopup && (
                         <div className={styles.morePopup}>
-                            {list.slice(chipPopupNextLineFirstElem, list.length-1).map(chip => (
+                            {list.slice(chipPopupNextLineFirstElem, list.length).map(chip => (
                                 <Chip
                                     key={chip.id}
                                     id={chip.id}

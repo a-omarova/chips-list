@@ -6,7 +6,7 @@ export const Chip = (props: ChipPropsType) => {
     const {id, name, multiple, value, isChecked, onChipClick} = props
 
     return (
-        <label className={styles.label} data-id={`${name}-${id}`}>
+        <label className={styles.label}>
             {onChipClick && (
                 multiple
                     ? (

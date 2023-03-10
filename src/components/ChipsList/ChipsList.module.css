@@ -1,7 +1,6 @@
 .root {
 	display: flex;
-	gap: 10px;
-	padding-right: 60px;
+	padding-right: 65px;
 	position: relative;
 }
 

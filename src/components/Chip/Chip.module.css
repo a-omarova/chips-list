@@ -20,3 +20,6 @@ input + .value {
 	cursor: pointer;
 }
 
+input:focus-visible + .value {
+	outline: 3px solid var(--color-chip-background-active);
+}
