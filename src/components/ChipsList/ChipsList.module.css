@@ -1,0 +1,52 @@
+.root {
+	display: flex;
+	gap: 10px;
+	padding-right: 60px;
+	position: relative;
+}
+
+.chipsList {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	max-height: 39px;
+	overflow: hidden;
+}
+
+.moreButton {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	border: none;
+	padding: 5px 15px;
+	height: 39px;
+	background-color: var(--color-chip-background);
+	color: var(--color-chip-text);
+	border-radius: 20px;
+}
+
+.moreContainer {
+	position: absolute;
+	right: 0;
+}
+
+.morePopup {
+	position: absolute;
+	z-index: 2;
+	right: 0;
+	top: 45px;
+	border: 1px solid #737373;
+	width: 415px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	background: var(--color-background);
+	padding: 10px 20px;
+}
+
+@media (max-width: 725px) {
+	.morePopup {
+		width: 280px;
+		padding: 5px 10px;
+	}
+}

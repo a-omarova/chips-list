@@ -1,0 +1,22 @@
+.label {
+	display: flex;
+}
+
+.value {
+	display: block;
+	padding: 10px 15px;
+	background-color: var(--color-chip-background);
+	color: var(--color-chip-text);
+	border-radius: 20px;
+	white-space: nowrap;
+}
+
+input:checked + .value {
+	background-color: var(--color-chip-background-active);
+	color: var(--color-chip-text-active);
+}
+
+input + .value {
+	cursor: pointer;
+}
+
